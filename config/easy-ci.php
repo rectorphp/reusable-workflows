@@ -8,6 +8,7 @@ use Rector\Core\Contract\Rector\RectorInterface;
 use Rector\Nette\Contract\FormControlTypeResolverInterface;
 use Rector\Nette\FormControlTypeResolver\AssignedVariablesMethodCallsFormTypeResolver;
 use Rector\Set\Contract\SetListInterface;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCI\ValueObject\Option;
 
@@ -22,5 +23,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         AssignedVariablesMethodCallsFormTypeResolver::class,
         // phpstan
         Rule::class,
+        // symfony
+        Command::class,
     ]);
 };
