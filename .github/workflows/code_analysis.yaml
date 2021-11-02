@@ -22,6 +22,11 @@ jobs:
                     -
                         name: 'Rector'
                         run: vendor/bin/rector process --dry-run --ansi
+                    -
+                        name: 'Active Classes'
+                        run: |
+                            composer require symplify/easy-ci --dev
+                            vendor/bin/easy-ci check-active-classes src --ansi
 
         name: ${{ matrix.actions.name }}
 
