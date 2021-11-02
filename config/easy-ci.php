@@ -23,6 +23,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         AssignedVariablesMethodCallsFormTypeResolver::class,
         // phpstan
         Rule::class,
+        \PHPStan\Type\DynamicMethodReturnTypeExtension::class,
+        \PHPStan\Type\DynamicFunctionReturnTypeExtension::class,
         // symfony
         Command::class,
     ]);
