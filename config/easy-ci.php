@@ -12,5 +12,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::TYPES_TO_SKIP, [
         RectorInterface::class,
         SetListInterface::class,
+        \Rector\Core\Contract\Processor\FileProcessorInterface::class,
     ]);
 };
