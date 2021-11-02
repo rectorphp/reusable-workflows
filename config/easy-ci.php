@@ -1,0 +1,14 @@
+<?php
+
+declare(strict_types=1);
+
+use Rector\Core\Contract\Rector\RectorInterface;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCI\ValueObject\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::TYPES_TO_SKIP, [
+         RectorInterface::class
+    ]);
+};

@@ -19,14 +19,18 @@ jobs:
                     -
                         name: 'ECS'
                         run: composer check-cs
+                        # todo add basic config
                     -
                         name: 'Rector'
                         run: vendor/bin/rector process --dry-run --ansi
+                        # todo add basic config - copy form ehere?
                     -
                         name: 'Active Classes'
                         run: |
                             composer require symplify/easy-ci:^10.0 --dev
                             vendor/bin/easy-ci check-active-class src --ansi
+                            wget  
+                            # todo add basic config
 
         name: ${{ matrix.actions.name }}
 
