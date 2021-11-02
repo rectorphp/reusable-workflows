@@ -14,16 +14,23 @@ jobs:
             matrix:
                 actions:
                     -
+                        name: 'Composer Validate'
+                        run: composer validate --strict
+
+                    -
                         name: 'PHPStan'
                         run: composer phpstan
+
                     -
                         name: 'ECS'
                         run: composer check-cs
                         # todo add basic config
+
                     -
                         name: 'Rector'
                         run: vendor/bin/rector process --dry-run --ansi
                         # todo add basic config - copy form ehere?
+
                     -
                         name: 'Active Classes'
                         run: |
