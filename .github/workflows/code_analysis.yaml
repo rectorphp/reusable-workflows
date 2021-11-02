@@ -25,7 +25,7 @@ jobs:
                     -
                         name: 'Active Classes'
                         run: |
-                            composer require symplify/easy-ci --dev
+                            composer require symplify/easy-ci:^10.0 --dev
                             vendor/bin/easy-ci check-active-classes src --ansi
 
         name: ${{ matrix.actions.name }}
