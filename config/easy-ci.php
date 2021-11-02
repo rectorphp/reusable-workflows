@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use PHPStan\Rules\Rule;
 use Rector\Core\Contract\Processor\FileProcessorInterface;
 use Rector\Core\Contract\Rector\RectorInterface;
 use Rector\Nette\Contract\FormControlTypeResolverInterface;
@@ -19,5 +20,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         // nette
         FormControlTypeResolverInterface::class,
         AssignedVariablesMethodCallsFormTypeResolver::class,
+        // phpstan
+        Rule::class,
     ]);
 };
