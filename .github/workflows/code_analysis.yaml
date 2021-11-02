@@ -29,8 +29,8 @@ jobs:
                         run: |
                             composer require symplify/easy-ci:^10.0 --dev
                             # get base config
-                            wget https://raw.githubusercontent.com/rectorphp/reusable-workflows/main/config/easy-ci.php easy-ci.php 
-
+                            wget https://raw.githubusercontent.com/rectorphp/reusable-workflows/main/config/easy-ci.php
+                            # run check
                             vendor/bin/easy-ci check-active-class src --ansi
 
         name: ${{ matrix.actions.name }}
