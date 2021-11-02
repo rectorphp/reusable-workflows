@@ -13,5 +13,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         RectorInterface::class,
         SetListInterface::class,
         \Rector\Core\Contract\Processor\FileProcessorInterface::class,
+        \Rector\Nette\FormControlTypeResolver\AssignedVariablesMethodCallsFormTypeResolver::class,
     ]);
 };
