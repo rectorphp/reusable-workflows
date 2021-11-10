@@ -15,7 +15,7 @@ jobs:
                 actions:
                     -
                         name: 'Composer Validate'
-                        run: composer validate --strict
+                        run: composer validate
 
                     -
                         name: 'PHPStan'
