@@ -29,7 +29,7 @@ jobs:
 
             -   uses: "ramsey/composer-install@v1"
 
-            -   run: vendor/bin/rector process --dry-run --ansi
+            -   run: vendor/bin/rector process --ansi
 
             # tidy up code
             -   run: vendor/bin/ecs check --fix --ansi
