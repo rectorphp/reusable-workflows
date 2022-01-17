@@ -2,6 +2,7 @@ name: Rector
 
 on:
     workflow_call:
+        # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
         secrets:
             ACCESS_TOKEN:
                 required: true
