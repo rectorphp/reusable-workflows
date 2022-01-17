@@ -27,11 +27,6 @@ jobs:
                         # todo add basic config
 
                     -
-                        name: 'Rector'
-                        run: vendor/bin/rector process --dry-run --ansi
-                        # todo add basic config - copy form ehere?
-
-                    -
                         name: 'Active Classes'
                         run: |
                             composer require symplify/easy-ci:^10.0 --dev --ansi
