@@ -12,7 +12,7 @@ env:
     COMPOSER_ROOT_VERSION: "dev-main"
 
 jobs:
-    code_analysis:
+    rector:
         runs-on: ubuntu-latest
 
         steps:
