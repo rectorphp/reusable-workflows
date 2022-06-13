@@ -29,7 +29,7 @@ jobs:
                     -
                         name: 'Active Classes'
                         run: |
-                            composer require symplify/easy-ci:^10.0 --dev --ansi
+                            composer require symplify/easy-ci:^11.0 --dev --ansi
                             # get base config
                             wget raw.githubusercontent.com/rectorphp/reusable-workflows/main/config/easy-ci.php
                             # run check
