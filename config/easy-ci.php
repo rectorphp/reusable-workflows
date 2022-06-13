@@ -9,12 +9,10 @@ use Rector\Nette\Contract\FormControlTypeResolverInterface;
 use Rector\Nette\FormControlTypeResolver\AssignedVariablesMethodCallsFormTypeResolver;
 use Rector\Set\Contract\SetListInterface;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCI\ValueObject\Option;
+use Symplify\EasyCI\Config\EasyCIConfig;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::TYPES_TO_SKIP, [
+return static function (EasyCIConfig $easyCIConfig): void {
+    $easyCIConfig->typesToSkip([
         RectorInterface::class,
         SetListInterface::class,
         FileProcessorInterface::class,
