@@ -10,6 +10,7 @@ env:
 jobs:
     code_analysis:
         runs-on: ubuntu-latest
+
         strategy:
             matrix:
                 actions:

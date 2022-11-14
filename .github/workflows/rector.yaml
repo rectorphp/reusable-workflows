@@ -2,10 +2,6 @@ name: Rector
 
 on:
     workflow_call:
-        # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-#        secrets:
-#            GITHUB_TOKEN:
-#                required: true
 
 env:
     # see https://github.com/composer/composer/issues/9368#issuecomment-718112361
