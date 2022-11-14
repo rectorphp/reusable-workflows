@@ -3,9 +3,9 @@ name: Rector
 on:
     workflow_call:
         # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-        secrets:
-            GITHUB_TOKEN:
-                required: true
+#        secrets:
+#            GITHUB_TOKEN:
+#                required: true
 
 env:
     # see https://github.com/composer/composer/issues/9368#issuecomment-718112361
@@ -30,11 +30,7 @@ jobs:
             -   uses: "ramsey/composer-install@v1"
 
             -   run: vendor/bin/rector process --ansi
-
-            # tidy up code
             -   run: vendor/bin/ecs check --fix --ansi
-
-            # todo add basic config - copy form ehere?
 
             # commit changes, see https://github.com/EndBug/add-and-commit
             -
