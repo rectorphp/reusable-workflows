@@ -14,7 +14,7 @@ env:
 jobs:
     rector:
         # only on main repository, not on forks - see https://github.com/orgs/community/discussions/25641#discussioncomment-3248571
-        if: github.repository == 'rectorphp/rector-phpunit' || github.repository == 'rectorphp/rector-symfony' || github.repository == 'rectorphp/rector-generator || github.repository == 'rectorphp/phpstan-rules || github.repository == 'rectorphp/rector-doctrine || github.repository == 'rectorphp/phpoffice || github.repository == 'rectorphp/rector-downgrade-php
+        if: github.repository == 'rectorphp/rector-phpunit' || github.repository == 'rectorphp/rector-symfony' || github.repository == 'rectorphp/rector-generator' || github.repository == 'rectorphp/phpstan-rules' || github.repository == 'rectorphp/rector-doctrine' || github.repository == 'rectorphp/phpoffice' || github.repository == 'rectorphp/rector-downgrade-php'
 
         runs-on: ubuntu-latest
 
