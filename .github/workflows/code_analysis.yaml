@@ -21,10 +21,10 @@ jobs:
                         name: 'PHPStan'
                         run: composer phpstan
 
-                    -
-                        name: 'ECS'
-                        run: composer check-cs
-                        # todo add basic config
+                    #-
+                    #    name: 'ECS'
+                    #      run: composer check-cs
+                    #      # todo add basic config
 
                     -
                         name: 'Active Classes'
