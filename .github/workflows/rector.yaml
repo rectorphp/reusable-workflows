@@ -4,7 +4,7 @@ on:
     workflow_call:
         # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
         secrets:
-            ACCESS_TOKEN:
+            GITHUB_TOKEN:
                 required: true
 
 env:
