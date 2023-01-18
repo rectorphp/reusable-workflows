@@ -30,11 +30,8 @@ jobs:
                     -
                         name: 'Active Classes'
                         run: |
-                            composer require symplify/easy-ci:^11.0 --dev --ansi
-                            # get base config
-                            wget raw.githubusercontent.com/rectorphp/reusable-workflows/main/config/easy-ci.php
-                            # run check
-                            vendor/bin/easy-ci check-active-class src --ansi
+                            composer require symplify/easy-ci:^11.2 --dev --ansi
+                            vendor/bin/easy-ci check-active-class --ansi
 
         name: ${{ matrix.actions.name }}
 
