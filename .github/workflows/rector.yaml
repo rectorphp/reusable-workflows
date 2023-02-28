@@ -30,13 +30,8 @@ jobs:
 
             # commit changes, see https://github.com/EndBug/add-and-commit
             -
-                uses: EndBug/add-and-commit@v7.5.0
+                uses: stefanzweifel/git-auto-commit-action@v4
                 with:
-                    # The arguments for the `git add` command (see the paragraph below for more info)
-                    add: .
-                    message: "[ci-review] Rector Rectify"
-                    author_name: "GitHub Action"
-                    author_email: "action@github.com"
-                env:
-                    # to get push access
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    commit_message: '[ci-review] Rector Rectify'
+                    commit_author: 'GitHub Action <actions@github.com>'
+                    commit_user_email: 'action@github.com'
