@@ -22,17 +22,6 @@ jobs:
                         name: 'PHPStan'
                         run: composer phpstan
 
-                    #-
-                    #    name: 'ECS'
-                    #      run: composer check-cs
-                    #      # todo add basic config
-
-                    -
-                        name: 'Active Classes'
-                        run: |
-                            composer require symplify/easy-ci:^11.2 --dev --ansi
-                            vendor/bin/easy-ci check-active-class --ansi
-
         name: ${{ matrix.actions.name }}
 
         steps:
